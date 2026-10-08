@@ -1,8 +1,8 @@
 # アプリの配色テーマ（分析化学らしい teal/cyan アクセント）
 [theme]
 base = "light"
-primaryColor = "#0031d8"
+primaryColor = "#9c3b00"
 backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f3f6ff"
+secondaryBackgroundColor = "#fff5ed"
 textColor = "#1a1a1c"
 font = "sans serif"
