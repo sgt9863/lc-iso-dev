@@ -157,7 +157,7 @@ st.set_page_config(page_title="HPLC デザインスペース最適化", layout="
 st.markdown("""
 <style>
   :root { --accent:#0d9488; --accent2:#0891b2; --line:rgba(128,128,128,.22); }
-  .block-container { padding-top: 1.1rem; max-width: 1120px; }
+  .block-container { padding-top: 4rem; max-width: 1120px; }
 
   /* ── ヘッダー（帯ではなく、グラデ見出し＋細いルール） ── */
   .app-header { margin:.1rem 0 1.15rem; }
@@ -195,10 +195,32 @@ st.markdown("""
 
   /* ── 見出しを引き締める ── */
   h2, h3 { margin-top:.3rem; font-weight:650; letter-spacing:-.006em; }
+
+/* DADS foundations: https://design.digital.go.jp/dads/ */
+:root { --blue:#0031d8; --ink:#1a1a1c; --ink-soft:#525258; --line:#b6b6be; --line-strong:#757578; --paper:#fff; --paper-soft:#f3f6ff; --accent:#0031d8; --accent2:#0031d8; }
+.stApp { font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif; font-size:16px; line-height:1.8; color:var(--ink); }
+[data-testid="stMarkdownContainer"] p { line-height:1.8; }
+.stApp a { color:var(--blue); text-decoration:underline; text-underline-offset:.2em; }
+.stApp :is(button,input:not([type="checkbox"]):not([type="radio"]),select,summary) { min-height:44px; }
+.stApp :is(a,button,input,select,textarea,summary):focus-visible { outline:3px solid #1a1a1c !important; outline-offset:2px; box-shadow:0 0 0 6px #ffd43d !important; }
+.stApp label:has(input:focus-visible) { outline:3px solid #1a1a1c; outline-offset:2px; box-shadow:0 0 0 6px #ffd43d; }
+button[kind="primary"], [data-testid="stBaseButton-primary"] { background:#0031d8; color:#fff; border:1px solid #0031d8; }
+button[kind="primary"]:hover, [data-testid="stBaseButton-primary"]:hover { background:#001d80; color:#fff; }
+[data-testid="stSidebar"] div[role="radiogroup"] > label { min-height:44px; }
+[data-testid="stSidebar"] div[role="radiogroup"] > label:has(input:checked) { box-shadow:inset 4px 0 0 #0031d8; background:#f3f6ff; }
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p { color:#525258 !important; font-size:.875rem; line-height:1.8; }
+.app-header h1 { color:#1a1a1c; background:none; -webkit-text-fill-color:currentColor; }
+.app-header .rule,.brand-rule,[data-baseweb="tab-highlight"] { background:#0031d8; }
+.app-header p { opacity:1; color:#525258; font-size:1rem; }
+[data-testid="stMetric"] { border-radius:4px; background:#f3f6ff; }
+[data-testid="stMetricLabel"] p { font-size:.875rem; }
+[data-testid="stExpander"],.stButton button,.stDownloadButton button { border-radius:4px; }
+@media(prefers-reduced-motion:reduce) { * { animation:none !important; transition:none !important; } }
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown("""
+<nav aria-label="サイト"><a href="https://sgt9863.com/">sgt9863.com ホーム</a> ／ <a href="./">LC 理解ノート</a></nav>
 <div class="app-header">
   <h1>HPLC デザインスペース最適化</h1>
   <p>実験計画（CCD / BBD） → メカニズム・二次回帰フィット → デザインスペース → ロバストな最適条件</p>
